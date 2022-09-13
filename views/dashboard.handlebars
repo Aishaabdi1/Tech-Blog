@@ -1,0 +1,13 @@
+<a href="/dashboard/create-post"><button class="create-btn">Create Post</button></a>
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ul>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-edit post}}
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/if}}
